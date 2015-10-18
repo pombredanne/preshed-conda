@@ -1,0 +1,33 @@
+package:
+  name: preshed
+  version: "0.42"
+
+source:
+  fn: preshed-0.42.tar.gz
+  url: https://pypi.python.org/packages/source/h/headers_workaround/headers_workaround-0.42.tar.gz
+  md5: 7cae17b54bd3f4b4d2e5699ac57a53ad
+
+build:
+  script: $PYTHON setup.py install
+  # noarch_python: True
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - jinja2
+    - murmurhash
+    - cymem
+
+  run:
+    - python
+    - murmurhash
+    - cymem
+
+test:
+  imports:
+    - preshed
+
+about:
+  home: https://github.com/syllog1sm/headers_workaround
+  summary: 'Add this to setup_requires, and use it to install headers.'
