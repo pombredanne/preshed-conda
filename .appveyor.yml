@@ -43,9 +43,6 @@ install:
   # Installed SDKs
   # - ps: "ls \"C:/Program Files/Microsoft SDKs/Windows\""
 
-  # Checking stdint.h
-  #- ps: "ls \"C:/projects/spacy/include/\""
-
   # Upgrade to the latest version of conda and install dependencies to build and upload packages
   - "conda config --set always_yes yes --set changeps1 no"
   # - "conda upgrade -q conda pip"

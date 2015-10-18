@@ -4,7 +4,7 @@ package:
 
 source:
   fn: preshed-0.42.tar.gz
-  url: https://pypi.python.org/packages/source/h/headers_workaround/headers_workaround-0.42.tar.gz
+  url: https://pypi.python.org/packages/source/p/preshed/preshed-0.42.tar.gz
   md5: 7cae17b54bd3f4b4d2e5699ac57a53ad
 
 build:
@@ -29,5 +29,5 @@ test:
     - preshed
 
 about:
-  home: https://github.com/syllog1sm/headers_workaround
-  summary: 'Add this to setup_requires, and use it to install headers.'
+  home: https://github.com/syllog1sm/preshed	
+  summary: 'Cython hash table that trusts the keys are pre-hashed'
