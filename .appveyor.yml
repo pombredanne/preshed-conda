@@ -60,7 +60,6 @@ build_script:
 
 test_script:
   - python appveyor\move_conda_package.py .
-  # - ps: "ls"
 
 artifacts:
   # Archive the generated packages in the ci.appveyor.com build report.
