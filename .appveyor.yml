@@ -45,9 +45,9 @@ install:
 
   # Upgrade to the latest version of conda and install dependencies to build and upload packages
   - "conda config --set always_yes yes --set changeps1 no"
-  # - "conda upgrade -q conda pip"
   # Install the build prerequisites
-  - "conda install -q conda-build jinja2 anaconda-client"	
+  - "conda install -q conda-build anaconda-client"	
+  - "conda config --set channels maxirmx"
 
 build_script:                                                                                   
   # Check that we have the expected version and architecture for Python

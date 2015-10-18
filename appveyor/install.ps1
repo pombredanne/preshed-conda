@@ -249,7 +249,6 @@ function InstallStdintH ($python_version) {
 
 function main () {
     InstallMiniconda $env:PYTHON_VERSION $env:PYTHON_ARCH $env:PYTHON
-    InstallMinicondaPip $env:PYTHON
     InstallStdintH $env:PYTHON_VERSION
 }
 

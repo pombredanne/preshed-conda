@@ -15,7 +15,6 @@ requirements:
   build:
     - python
     - setuptools
-    - jinja2
     - headers_workaround
     - murmurhash
     - cymem
