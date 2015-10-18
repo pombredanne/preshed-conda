@@ -47,7 +47,7 @@ install:
   - "conda config --set always_yes yes --set changeps1 no"
   # Install the build prerequisites
   - "conda install -q conda-build anaconda-client"	
-  - "conda config --set channels maxirmx"
+  - "conda config --add channels maxirmx"
 
 build_script:                                                                                   
   # Check that we have the expected version and architecture for Python
