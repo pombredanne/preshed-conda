@@ -1,4 +1,4 @@
-This is a project to create conda package for https://github.com/syllog1sm/preshed
+This is a project to create conda packages for https://github.com/syllog1sm/preshed
 
 Linux64/OSX64 build status 
 
