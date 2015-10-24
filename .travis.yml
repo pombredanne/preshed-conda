@@ -35,6 +35,6 @@ install:
 
 script:
   - conda info -a 
-  - conda config --add channels maxirmx
+  - conda config --add channels spacy
   - conda build -q --python $PYTHON_VER --no-anaconda-upload .
   - anaconda -t $ANACONDA_TOKEN upload -u spacy --force --no-progress $(conda build --python $PYTHON_VER --output .)
