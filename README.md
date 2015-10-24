@@ -10,3 +10,5 @@ Win64/32 build status
 
 [![Build status](https://ci.appveyor.com/api/projects/status/f8s6i4ahkhhn65b4?svg=true)](https://ci.appveyor.com/project/maxirmx/preshed-conda)
                       
+
+Conda packages: https://anaconda.org/henningpeters/preshed
