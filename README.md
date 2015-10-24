@@ -3,7 +3,7 @@ This is a project to create conda package for https://github.com/syllog1sm/presh
 Linux64 build status 
 
 
-![Travis CI](https://travis-ci.org/maxirmx/preshed-conda.svg?branch=master)
+![Travis CI](https://travis-ci.org/henningpeters/preshed-conda.svg?branch=master)
 
 Win64/32 build status
 
