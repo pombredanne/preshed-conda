@@ -27,41 +27,27 @@ environment:
 
 
 install:
-  # Install Python (from the official .msi of http://python.org) and pip when
-  # not already installed.
-  - ps: appveyor\install.ps1 
+  # Checking submodule(s) out
+  - git submodule update --init --recursive
+  # Install miniconda & stdint.h as needed
+  - ps: appveyor\install.ps1 -miniconda -stdint 
 
   # Prepend newly installed Python to the PATH of this build (this cannot be
   # done from inside the powershell script as it would require to restart
-  # the parent CMD process).
-  - "SET PATH=%CD%;%PYTHON%;%PYTHON%\\Scripts;%PATH%"
-  - "SET PYTHONPATH=%CD%;%PYTHONPATH%"
-
-  # Filesystem root
-  # - ps: "ls \"C:/\""
-
-  # Installed SDKs
-  # - ps: "ls \"C:/Program Files/Microsoft SDKs/Windows\""
+  # the parent CMD process)
+  - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
 
   # Upgrade to the latest version of conda and install dependencies to build and upload packages
-  - "conda config --set always_yes yes --set changeps1 no"
-  # Install the build prerequisites
-  - "conda install -q conda-build anaconda-client"	
-  - "conda config --add channels maxirmx"
+  - conda config --set always_yes yes --set changeps1 no
+  # Install the build and test prerequisites
+  - conda install -q conda-build anaconda-client
 
 build_script:                                                                                   
-  # Check that we have the expected version and architecture for Python
-  - "conda info -a"
+  # Check that we have the expected version and architecture for conda
+  - conda info -a
   # Build
-  - "%CMD_IN_ENV% conda build -q ."
-
-test_script:
-  - python appveyor\move_conda_package.py .
-
-artifacts:
-  # Archive the generated packages in the ci.appveyor.com build report.
-  - path: '*.tar.bz2'
+  - "%CMD_IN_ENV% conda build -q --no-anaconda-upload ."
 
 on_success:
-  - "for %%f in (*.tar.bz2) do anaconda -t %ANACONDA_TOKEN% upload -u maxirmx --force --no-progress %%f"
+  - "for /f %%f in ('conda build -q --output .') do anaconda -t %ANACONDA_TOKEN% upload -u maxirmx --force --no-progress %%f"
 

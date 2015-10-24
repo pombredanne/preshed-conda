@@ -26,6 +26,6 @@ install:
 
 script:
   - conda info -a 
-  - conda build --python $PYTHON_VER .
+  - conda build -q --python $PYTHON_VER --no-anaconda-upload .
   - anaconda -t $ANACONDA_TOKEN upload -u maxirmx --force --no-progress $(conda build --python $PYTHON_VER --output .)
 
