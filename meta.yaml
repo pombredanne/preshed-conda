@@ -30,4 +30,5 @@ test:
 
 about:
   home: https://github.com/syllog1sm/preshed
+  license: MIT
   summary: 'Cython hash table that trusts the keys are pre-hashed'
