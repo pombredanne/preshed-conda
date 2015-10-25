@@ -41,7 +41,7 @@ install:
   - conda config --set always_yes yes --set changeps1 no
   # Install the build and test prerequisites
   - conda install -q conda-build anaconda-client
-  - conda config --add channels maxirmx
+  - conda config --add channels spacy
 
 build_script:                                                                                   
   # Check that we have the expected version and architecture for conda
@@ -50,5 +50,5 @@ build_script:
   - "%CMD_IN_ENV% conda build -q --no-anaconda-upload ."
 
 on_success:
-  - "for /f %%f in ('conda build -q --output .') do anaconda -t %ANACONDA_TOKEN% upload -u maxirmx --force --no-progress %%f"
+  - "for /f %%f in ('conda build -q --output .') do anaconda -t %ANACONDA_TOKEN% upload -u spacy --force --no-progress %%f"
 
