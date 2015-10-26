@@ -28,7 +28,7 @@ environment:
 
 install:
   # Checking submodule(s) out
-  - git submodule update --init --recursive
+  - git submodule update --init --remote
   # Install miniconda & stdint.h as needed
   - ps: appveyor\install.ps1 -miniconda -stdint 
 
