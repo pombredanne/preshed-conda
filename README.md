@@ -1,6 +1,6 @@
 This is a project to create conda packages for https://github.com/syllog1sm/preshed
 
-Linux64/OSX64 build status 
+Linux64/OSX build status 
 
 
 [![Travis CI](https://travis-ci.org/henningpeters/preshed-conda.svg?branch=master)](https://travis-ci.org/henningpeters/preshed-conda)
