@@ -11,9 +11,9 @@ sudo: false
 
 install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
-      fn=Miniconda-latest-MacOSX-x86_64.sh;
+      fn=Miniconda3-latest-MacOSX-x86_64.sh;
     elif [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-      fn=Miniconda-latest-Linux-x86_64.sh;
+      fn=Miniconda3-latest-Linux-x86_64.sh;
     fi
 
   - wget https://repo.continuum.io/miniconda/$fn -O miniconda.sh
