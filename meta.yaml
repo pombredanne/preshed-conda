@@ -1,11 +1,11 @@
 package:
   name: preshed
-  version: "0.42"
+  version: "0.43"
 
 source:
-  fn: preshed-0.42.tar.gz
-  url: https://pypi.python.org/packages/source/p/preshed/preshed-0.42.tar.gz
-  md5: 7cae17b54bd3f4b4d2e5699ac57a53ad
+  fn: preshed-0.43.tar.gz
+  url: https://pypi.python.org/packages/source/p/preshed/preshed-0.43.tar.gz
+  md5: cad1ee9a06d267b2bc8feb3c0aa53f84
 
 build:
   script: $PYTHON setup.py install
