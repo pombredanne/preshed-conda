@@ -32,6 +32,7 @@ install:
   - conda config --set always_yes yes --set changeps1 no
   # Install the build and test prerequisites
   - conda install -q conda-build anaconda-client
+  - conda config --add channels spacy
 
 build_script:                                                                                   
   # Check that we have the expected version and architecture for conda
