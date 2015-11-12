@@ -1,11 +1,11 @@
 package:
   name: preshed
-  version: "0.43"
+  version: "0.44"
 
 source:
-  fn: preshed-0.43.tar.gz
-  url: https://pypi.python.org/packages/source/p/preshed/preshed-0.43.tar.gz
-  md5: cad1ee9a06d267b2bc8feb3c0aa53f84
+  fn: preshed-0.44.tar.gz
+  url: https://pypi.python.org/packages/source/p/preshed/preshed-0.44.tar.gz
+  md5: 240520aa623eabaefbca3d81e6dd032e
 
 build:
   script: $PYTHON setup.py install
@@ -13,16 +13,16 @@ build:
 
 requirements:
   build:
-    - python
+    - python >=2.7
     - headers_workaround
     - murmurhash
-    - cymem
+    - cymem ==1.30
 
   run:
-    - python
+    - python >=2.7
     - headers_workaround
     - murmurhash
-    - cymem
+    - cymem ==1.30
 
 test:
   imports:
